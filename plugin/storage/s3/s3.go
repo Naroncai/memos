@@ -20,6 +20,7 @@ type Config struct {
 	EndPoint  string
 	Region    string
 	URLPrefix string
+	URLSuffix string
 }
 
 type Client struct {
@@ -32,6 +33,9 @@ func NewClient(ctx context.Context, config *Config) (*Client, error) {
 		return aws.Endpoint{
 			URL:           config.EndPoint,
 			SigningRegion: config.Region,
+			// For some s3-compatible object stores, converting the hostname is not required,
+			// and not setting this option will result in not being able to access the corresponding object store address.
+			HostnameImmutable: true,
 		}, nil
 	})
 
@@ -67,7 +71,7 @@ func (client *Client) UploadFile(ctx context.Context, filename string, fileType 
 	link := uploadOutput.Location
 	// If url prefix is set, use it as the file link.
 	if client.Config.URLPrefix != "" {
-		link = fmt.Sprintf("%s/%s", client.Config.URLPrefix, filename)
+		link = fmt.Sprintf("%s/%s%s", client.Config.URLPrefix, filename, client.Config.URLSuffix)
 	}
 	if link == "" {
 		return "", fmt.Errorf("failed to get file link")

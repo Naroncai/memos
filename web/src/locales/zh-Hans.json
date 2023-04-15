@@ -52,24 +52,28 @@
     "vacuum": "清理",
     "select": "选择",
     "database": "数据库",
-    "avatar": "头像"
+    "avatar": "头像",
+    "rename": "改名",
+    "upload": "上传",
+    "visibility": "能见度",
+    "preview": "预览",
+    "name": "姓名",
+    "clear": "清除"
   },
-  "slogan": "一个可用于知识管理和社交网络的开源、自托管的备忘录中心。",
   "auth": {
     "signup-as-host": "注册为 Host",
     "host-tip": "你正在注册为 Host 用户账号。",
-    "not-host-tip": "如果你没有账号，请联系站点 Host"
+    "not-host-tip": "如果你没有账号，请联系站点 Host",
+    "new-password": "新密码",
+    "repeat-new-password": "重复新密码"
   },
-  "daily-review": {
-    "oops-nothing": "啊哦，空空荡荡。"
-  },
-  "resources": {
+  "resource": {
     "description": "查看在 Memo 中的静态资源。例如：图片",
     "no-resources": "没有资源",
     "fetching-data": "请求数据中...",
     "upload": "上传",
     "preview": "预览",
-    "copy-link": "拷贝链接",
+    "copy-link": "复制链接",
     "delete-resource": "删除资源",
     "warning-text": "确定删除这个资源么？此操作不可逆❗",
     "linked-amount": "链接的 Memo 数量",
@@ -79,7 +83,27 @@
     "no-unused-resources": "无可删除的资源",
     "name": "资源名称",
     "delete-selected-resources": "删除选中资源",
-    "no-files-selected": "没有文件被选中❗"
+    "no-files-selected": "没有文件被选中❗",
+    "upload-successfully": "上传成功",
+    "file-drag-drop-prompt": "将您的文件拖放到此处以上传文件",
+    "select": "选择",
+    "create-dialog": {
+      "external-link": {
+        "type-placeholder": "文件类型",
+        "link": "链接",
+        "file-name": "文件名",
+        "type": "类型",
+        "file-name-placeholder": "文件名",
+        "option": "外部链接"
+      },
+      "local-file": {
+        "choose": "选择一个文件...",
+        "option": "本地文件"
+      },
+      "upload-method": "上传方式",
+      "title": "创建资源"
+    },
+    "search-bar-placeholder": "搜索资源"
   },
   "archived": {
     "archived-memos": "已归档的 Memo",
@@ -99,12 +123,20 @@
   "memo": {
     "view-detail": "查看详情",
     "copy": "复制",
+    "copy-link": "复制链接",
     "visibility": {
       "private": "仅自己可见",
       "protected": "登录用户可见",
       "public": "所有人可见",
       "disabled": "公共memos已禁用"
-    }
+    },
+    "embed": "嵌入",
+    "search-placeholder": "搜索备忘录",
+    "archived-at": "存档于",
+    "no-archived-memos": "没有存档的备忘录。",
+    "fetching-data": "正在获取数据...",
+    "archived-memos": "归档备忘录",
+    "fetch-more": "点击此处获取更多"
   },
   "memo-list": {
     "fetching-data": "请求数据中...",
@@ -173,7 +205,9 @@
       "mobile-editor-style": "移动端编辑器样式",
       "default-memo-sort-option": "Memo 显示时间",
       "created_ts": "创建时间",
-      "updated_ts": "更新时间"
+      "updated_ts": "更新时间",
+      "daily-review-time-offset": "每日回顾时间偏移",
+      "default-resource-visibility": "默认资源可见性"
     },
     "storage-section": {
       "storage-services-list": "存储服务列表",
@@ -218,6 +252,8 @@
   "message": {
     "no-memos": "没有 Memo 了 🌃",
     "memos-ready": "所有 Memo 已就绪 🎉",
+    "no-resource": "没有 Resource 了 🌃",
+    "resource-ready": "所有 Resource 已就绪 🎉",
     "restored-successfully": "恢复成功",
     "memo-updated-datetime": "Memo 创建日期时间已更改。",
     "invalid-created-datetime": "创建的日期时间无效。",
@@ -270,5 +306,23 @@
     "sat": "六",
     "sunday": "星期天",
     "sun": "日"
+  },
+  "embed-memo": {
+    "title": "嵌入备忘录",
+    "copy": "复制",
+    "only-public-supported": "* 仅支持公开备忘录。",
+    "text": "将以下代码复制并粘贴到您的博客或网站中。"
+  },
+  "ask-ai": {
+    "placeholder": "随便问",
+    "title": "问AI",
+    "not-enabled": "您尚未设置 OpenAI API 密钥。",
+    "go-to-settings": "前往设置"
+  },
+  "daily-review": {
+    "title": "每日回顾"
+  },
+  "router": {
+    "back-to-home": "回到首页"
   }
 }
